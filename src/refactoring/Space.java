@@ -1,10 +1,12 @@
 package refactoring;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Space {
 	private Point point;
 	private int width, height;
+	private List<Point> pointList = new ArrayList<Point>();
 
 	public int getWidth() {
 		return width;
@@ -13,8 +15,6 @@ public class Space {
 	public int getHeight() {
 		return height;
 	}
-
-	private List<Point> pointList;
 
 	public Space(Point point, int width, int height) {
 		this.point = point;

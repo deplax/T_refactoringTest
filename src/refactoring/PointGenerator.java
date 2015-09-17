@@ -3,10 +3,11 @@ package refactoring;
 import java.util.ArrayList;
 import java.util.List;
 
+//사각형의 공간을 n개로 분할하여 m개의 포인트 쏠리지 않게 생성한 리스트를 리턴한다.
 public class PointGenerator {
 
 	// Divide Space
-	public Space[] divideSpace(Space space, int divide) {
+	private Space[] divideSpace(Space space, int divide) {
 		int spaceWidth = space.getWidth() / divide;
 		int spaceHeight = space.getHeight() / divide;
 
@@ -20,7 +21,7 @@ public class PointGenerator {
 		return spaces;
 	}
 
-	public List<Point> generate(Space space, int num) {
+	private List<Point> generate(Space space, int num) {
 		space.generatePoints(num);
 		return space.getPointList();
 	}
